@@ -17,3 +17,5 @@ No data should be uploaded to this repo. Additionally, any screenshots should **
 
 ## Additional
 [Pandas quiz](https://forms.gle/E2vXt9kXqTFPkXBd9) Opens Google Form. Responses are collected anonymously, score and answers are provided once the quiz is submitted.
+
+To request new content or suggest changes to existing content, raise an [issue](https://github.com/alexlastoriabutlerjisc/python-tutorial/issues/new).
