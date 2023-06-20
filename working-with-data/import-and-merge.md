@@ -47,14 +47,30 @@ df2 = get_hesa_csv('https://www.hesa.ac.uk/data-and-analysis/sb262/figure-1.csv'
 ```
 
 There should now be two dataframes: df1, df2. The number of rows in each should be identical as each contains the same number of academic years (10) and variable values (level of study).
+
+Now to compare the data.
+It's worth noting that as the datasets are from two separate (rolling) years, the first academic year of df1 and the last year of df2 will not appear in the other dataset.
+
+Pandas' merge function allows dataframes to be combined on matching variable values.
+In this case, the shared variables between the datasets are 'Academic year' and 'Level of study', the third column of the data being value, which we want to exclude here to be able to see the differences on a row-by-row level.
+Feed in the shared variables as a list [ ] into the function. State the method of matching, similar to SQL, 'outer' will display data from both datasets, whether the data is in both dataframes or not.
+Adding the "indicator=True" argument appends a column to the output noting: whether the matches appear in both datasets 'both', the first one 'left_only' or the second 'right_only'.
+
 ```python
 merged = pd.merge(df1, df2,
                   how='outer',
                   left_on = ['Academic year', 'Level of study'], 
-                  right_on = ['Academic year', 'Level of study'])
+                  right_on = ['Academic year', 'Level of study'],
+                  indicator=True)
+```
+The output dataset would have two value columns, _x and _y. The first being the values of df1, the second df2. Where there are mismatches, the values will be NaN.
+
+To view the differences clearly, a column showing the differences can be added. The mismatched NaN rows here are filled with 0s. Not doing so would display NaN in the differences column as Pandas does not perform calculations on NaN values.
+```python
 merged['diff'] = merged['Number_x'].fillna(0) - merged['Number_y']. fillna(0)
+```
+Finally, to view only the non-matches as a separate dataframe, the differences column can be filtered to non-zero values.
 
+```python
 differences = merged[merged['diff'] != 0]
-
-print(differences)
 ```
