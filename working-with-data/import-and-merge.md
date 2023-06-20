@@ -20,7 +20,7 @@ HESA's open data prepends a metadata section above the open data in CSVs. skipro
 Bulletins are typically a fixed 5 or 10 years where the data is available, so number of rows to skip will be consistent. This is not the case for open data.
 See the example below of what the metadata looks like. The "real" data starts with 'Academic year'.
 
-![metadatapreview](../../images/metadata.png)
+![metadatapreview](../images/metadata.png)
 
 To view the number of rows in Python, import the data with no row skip, then run 
 ```python
