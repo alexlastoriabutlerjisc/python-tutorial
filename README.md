@@ -1,6 +1,7 @@
 # Python tutorial
 This content will instruct users on working with Jisc/HESA Data Collection and Statistics: Data &amp; Innovation data in Python.
-The intention is not to replicate the thousands of basic Python tutorials, this content should be specifically tailored to using D&I data.
+
+The intention is not to replicate the thousands of basic Python tutorials, [Jisc even have their own](https://github.com/JiscDACT/PositivelySkewed). The code in this repo should be specifically tailored to working with D&I data.
 
 ## Contents
 ### Working with data
