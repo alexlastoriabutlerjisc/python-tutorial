@@ -3,6 +3,10 @@ This content will instruct users on working with Jisc/HESA Data Collection and S
 
 The intention is not to replicate the thousands of basic Python tutorials, [Jisc even have their own](https://github.com/JiscDACT/PositivelySkewed). The code in this repo should be specifically tailored to working with D&I data.
 
+:warning:**Important**:warning:
+
+No data should be uploaded to this repo. Additionally, any screenshots should **not** contain data, real or otherwise. Usernames should also be suppressed.
+
 ## Contents
 ### Working with data
 1) [Basic data scrape and comparison](https://github.com/alexlastoriabutlerjisc/python-tutorial/blob/main/working-with-data/import-and-merge.md)
