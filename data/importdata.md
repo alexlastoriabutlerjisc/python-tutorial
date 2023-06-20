@@ -1,14 +1,20 @@
 # Basic data scrape and comparison
+Pandas is the best library to use for data manipulation in Python.
+It offers a number of easy to use features and structures the data in an easy to work with format.
+The main data structures of Pandas are dataframes (think an Excel spreadsheet), dataframes are constructed of series (think columns of a spreadsheet). Rows can be referred to as index/indices, these start at 0 by default. Caution though that Pandas dataframes can use column indexing, i.e. to return column 2 of a dataframe, one could use ```df1.iloc[:, 1]``` where:
+    "iloc" is index location, 
+    "[:" means return all rows (a number before the colon would return a set number of rows)
+    ", 1" returns column 2 of the dataframe where the first column is 0.
+
 The code below will read a CSV from the student open data as a Pandas dataframe
-
-nb: storage_options is an optional variable to include, the code will likely run without it but may be required for running on non Jisc laptops. It is a dictionary type containing some browser metadata to "spoof" a web browser.
-
 ```python
 import pandas as pd
 url = 'https://www.hesa.ac.uk/data-and-analysis/sb265/figure-1.csv'
 storage_options = {'User-Agent': 'Mozilla/5.0'}
 pd.read_csv(url, storage_options=storage_options, skiprows=22)
 ```
+NB: storage_options is an optional variable to include, the code will likely run without it but may be required for running on non Jisc laptops. It is a dictionary type containing some browser metadata to "spoof" a web browser.
+
 
 HESA's open data prepends a metadata section above the open data in CSVs. skiprows=22 removes this, the value of skiprows will need to change dependent on how many years of data the CSV contains.
 Bulletins are typically a fixed 5 or 10 years where the data is available, so number of rows to skip will be consistent. This is not the case for open data.
