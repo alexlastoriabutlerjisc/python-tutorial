@@ -13,7 +13,7 @@ pd.read_csv(url, storage_options=storage_options, skiprows=22)
 HESA's open data prepends a metadata section above the open data in CSVs. skiprows=22 removes this, the value of skiprows will need to change dependent on how many years of data the CSV contains.
 Bulletins are typically a fixed 5 or 10 years where the data is available, so number of rows to skip will be consistent. This is not the case for open data.
 
-
+![Download ZIP](images/metadata.png)
 
 As the purpose of this code is to compare two HESA datasets, it is advised to create a simple function to read this data, rather than repeat the code block.
 
