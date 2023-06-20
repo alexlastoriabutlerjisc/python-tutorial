@@ -5,7 +5,7 @@ The intention is not to replicate the thousands of basic Python tutorials, [Jisc
 
 :heavy_exclamation_mark::warning:**Important**:warning::heavy_exclamation_mark:
 
-No data should be uploaded to this repo. Additionally, any screenshots should **not** contain data, real or otherwise. Usernames should also be suppressed.
+No data should be uploaded to this repo. Additionally, any screenshots should **not** contain data, real or otherwise. Usernames and connections to databases should also be suppressed.
 
 ## Contents
 ### Working with data
