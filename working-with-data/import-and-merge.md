@@ -74,3 +74,25 @@ Finally, to view only the non-matches as a separate dataframe, the differences c
 ```python
 differences = merged[merged['diff'] != 0]
 ```
+
+The full code from the above is:
+```python
+import pandas as pd
+
+def get_hesa_csv(url, skip):
+    storage_options = {'User-Agent': 'Mozilla/5.0'}
+    return pd.read_csv(url, storage_options=storage_options, skiprows=skip)
+
+df1 = get_hesa_csv('https://www.hesa.ac.uk/data-and-analysis/sb265/figure-1.csv', skip=23)
+df2 = get_hesa_csv('https://www.hesa.ac.uk/data-and-analysis/sb262/figure-1.csv', skip=23)
+
+merged = pd.merge(df1, df2,
+                  how='outer',
+                  left_on = ['Academic year', 'Level of study'], 
+                  right_on = ['Academic year', 'Level of study'],
+                  indicator=True)
+
+merged['diff'] = merged['Number_x'].fillna(0) - merged['Number_y']. fillna(0)
+
+differences = merged[merged['diff'] != 0]
+```
