@@ -12,12 +12,7 @@ from sqlalchemy import create_engine
 # it's suggested that SQL strings are wrapped with speech marks rather than apostrophes
 # apostrophes are commonly used in SQL so would break the string unless handled
 sqlstring = """
-SELECT
-	*
-FROM [Exploitation].[D_Provider] P
-WHERE P.DW_FromDate <= 20200801 
-AND P.DW_ToDate >= 20200801 
-AND P.DW_AdminCenter = 1
+SELECT * FROM [x].[x]
 """
 
 # Connection string
