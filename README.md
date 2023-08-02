@@ -38,7 +38,7 @@ In time, this tutorial will contain content for the following, based on real use
 ## Contents
 ### Working with data
 1) [Basic data scrape and comparison](https://github.com/alexlastoriabutlerjisc/python-tutorial/blob/main/working-with-data/import-and-merge.md)
-2) more stuff
+2) [Importing from a SQL Server warehouse](https://github.com/alexlastoriabutlerjisc/python-tutorial/blob/main/working-with-data/importing_from_warehouse.py)
 
 ### Working with files
 1) [File paths](https://github.com/alexlastoriabutlerjisc/python-tutorial/blob/main/working-with-files/filepaths.md)
