@@ -24,8 +24,10 @@ connecting_string = "__" # Removed for access security
 # Used by SQLAlchemy to set up the DBAPI for connection to the warehouse
 # Quote plus, the only reason for urllib here replaces spaces in the above with "+"
 # this creates a string in a format that is understood by the SQL connection
+
+# The 'connection_string' below has been suppressed for security - this can be acquired upon request
 engine = create_engine("mssql+pyodbc:///?odbc_connect=%s" % 
-                       parse.quote_plus(connecting_string))
+                       parse.quote_plus(connection_string))
 
 # Perform the transaction of connecting to the warehouse using the above
 # Ex-HESA specific - you need to have the VPN connected for this step
