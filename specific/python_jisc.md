@@ -23,3 +23,5 @@ df['UKPRN'] = df['UKPRN'].astype(str).str.split('.', expand = True)[0]
 ## List comprehension in practice
 
 ## Table comparison
+
+## Import Excel
