@@ -44,3 +44,9 @@ Maybe a basic example to demo without the package
 ```
 pd.read_excel(, xlrd [plus others])
 ```
+
+```
+IDE advice and recommendations
+
+Using command line
+```
