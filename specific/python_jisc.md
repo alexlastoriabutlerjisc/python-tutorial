@@ -1,4 +1,6 @@
 # Specific requirements
+This repo intends to build on basic Python and Pandas knowledge and cater that to working at Jisc.
+
 ## UKPRN format
 By default most sources will format the UKPRN column as a floating point number when imported into a data frame.
 The following code converts the UKPRN column of a dataframe into a string, in doing so, that leaves a decimal e.g. "10007773.0".
