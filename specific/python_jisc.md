@@ -6,7 +6,7 @@ By default most sources will format the UKPRN column as a floating point number 
 The following code converts the UKPRN column of a dataframe into a string, in doing so, that leaves a decimal e.g. "10007773.0".
 The split separates the integer and decimal part of the converted UKPRN string, then takes the first part of that [0] ([1] would return the decimal due to Python 0 indexing)
 ``` python 
-df['UKPRN'] = df['UKPRN'].astype(str).str.split('.', expand = True)[0]
+df["UKPRN"] = df["UKPRN"].astype(str).str.split(".", expand = True)[0]
 ```
 ## File paths
 Python supports 'relative file paths'
@@ -58,7 +58,22 @@ Maybe a basic example to demo without the package
 ``` python
 pd.read_excel(, xlrd [plus others])
 ```
-
+## Standardisation of quote/apostrophe
+It is strongly recommended to use quote marks " as standard over apostrophes ' 
+For example - embedding SQL code in Python scripts:
+``` python
+sql = "SELECT TOP 100 * FROM [Student].[V056_StudentEngagement] WHERE Z_PERMADDGRP4 = '04'"
+```
+Or, a more preferred version of the above using multi-line text and f-strings:
+``` python
+sql = f"""
+SELECT TOP 100
+  *
+FROM [Student].[V056_StudentEngagement]
+WHERE
+  {field} = '{field_value}'
+"""
+```
 
 ## IDE advice and recommendations
 
